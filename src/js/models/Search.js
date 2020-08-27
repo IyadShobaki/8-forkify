@@ -1,1 +1,2 @@
-export default 'I am an exported string.';
+// const res = await axios(`${PROXY}http://food2fork.com/api/search?key=${KEY}&q=${this.query}`);  replace with the following
+//const res = await axios(`https://forkify-api.herokuapp.com/api/search?&q=${this.query}`);
