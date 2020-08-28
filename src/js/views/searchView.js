@@ -10,6 +10,15 @@ export const clearResults = () => {
     elements.searchResPages.innerHTML = '';
 };
 
+export const highlighSelected = id => {
+    const resultArr = Array.from(document.querySelectorAll('.results__link'));
+    resultArr.forEach(el => {
+        el.classList.remove('results__link--active');
+    });
+
+    document.querySelector(`a[href="#${id}"]`).classList.add('results__link--active');
+};
+
 // 'Pasta with tomato and spinach' example
 // acc:0 / acc + cur.length = 5 / newTitle = ['Pasta']    --> first iteration
 // acc:5 / acc + cur.length = 9 / newTitle = ['Pasta', 'with']    --> next iteration
